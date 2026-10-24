@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #183b4d;
+    background-color: #f2fbfd;
+}
+
+.encabezado-principal {
+    color: white;
+    background-color: #23658f;
+}
+
+.encabezado-principal p {
+    color: #d9f5fa;
+}
+
+h2 {
+    color: #0e87bb;
+}
+
+.card {
+    border-color: #b8dfe8;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.alert-success {
+    color: #23658f;
+    background-color: #e8f6fb;
+    border-color: #b8dfe8;
+}
+
+.texto-secundario {
+    color: #666666;
+}
+
+.pie-pagina {
+    color: white;
+    background-color: #183b4d;
+}
+
