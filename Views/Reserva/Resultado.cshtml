@@ -1,0 +1,16 @@
+@model AquaSerena.Models.Reserva
+
+@{
+    ViewData["Title"] = "Solicitud recibida";
+}
+
+<main class="container py-5">
+    <div class="alert alert-success">
+        <h1 class="h3">Gracias, @Model.Nombre</h1>
+        <p>Recibimos tu solicitud para @Model.Actividad.</p>
+        <p>Correo electrónico: @Model.Correo</p>
+        <p class="mb-0">Fecha de asistencia: @Model.Fecha</p>
+    </div>
+
+    <a asp-controller="Reserva" asp-action="Index" class="btn btn-primary">Volver al formulario</a>
+</main>

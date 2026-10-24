@@ -1,0 +1,49 @@
+@model AquaSerena.Models.Reserva
+
+@{
+    ViewData["Title"] = "Reserva";
+}
+
+<main class="container py-5">
+    <section class="my-4 p-4 border rounded shadow-sm">
+        <h1>Reserva tu espacio</h1>
+        <p>Escribe tus datos y selecciona la actividad que te interesa.</p>
+
+        <form asp-controller="Reserva" asp-action="Index" method="post">
+            <div class="mb-3">
+                <label asp-for="Nombre" class="form-label"></label>
+                <input asp-for="Nombre" class="form-control" placeholder="Escribe tu nombre" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Correo" class="form-label">Correo electrónico</label>
+                <input asp-for="Correo" type="email" class="form-control" placeholder="ejemplo@correo.com" />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Fecha" class="form-label">Fecha de asistencia</label>
+                <input asp-for="Fecha" type="date" class="form-control" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+
+            <p>¿Qué actividad te interesa?</p>
+            <div class="form-check">
+                <input asp-for="Actividad" class="form-check-input" type="radio" id="yoga" value="Yoga junto al agua" />
+                <label class="form-check-label" for="yoga">Yoga junto al agua</label>
+            </div>
+            <div class="form-check">
+                <input asp-for="Actividad" class="form-check-input" type="radio" id="meditacion" value="Meditación guiada" />
+                <label class="form-check-label" for="meditacion">Meditación guiada</label>
+            </div>
+            <div class="form-check mb-3">
+                <input asp-for="Actividad" class="form-check-input" type="radio" id="masaje" value="Masaje relajante" />
+                <label class="form-check-label" for="masaje">Masaje relajante</label>
+            </div>
+            <span asp-validation-for="Actividad" class="text-danger"></span>
+
+            <button type="submit" class="btn btn-primary mt-3">Enviar solicitud</button>
+        </form>
+    </section>
+</main>
